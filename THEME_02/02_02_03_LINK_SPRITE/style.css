@@ -1,0 +1,28 @@
+body{
+    background-image: url(spaceship.jpg);
+    animation: spaceship 20s linear infinite;
+    background-repeat: repeat-x;
+}
+
+/*==================NOW THE CHARACTER=================*/
+
+.cosmo{
+    width: 300px;
+    height: 300px;
+    background-image: url(worksheet2.png);
+    animation: float 1.5s infinite steps(4);
+    margin-top: 250px;
+    margin-left: 400px;
+}
+
+@keyframes float{
+    to{
+        background-position: -1200px;
+        }
+    }
+
+@keyframes spaceship{
+    to{
+        background-position: -1600px 0px;
+        }
+    }

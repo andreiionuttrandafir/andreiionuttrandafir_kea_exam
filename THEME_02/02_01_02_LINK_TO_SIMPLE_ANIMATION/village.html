@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Madara's game</title>
+   	 <style>
+   		body {
+   			height: 100%;
+   			width: 100%;
+   			margin: 0;
+   			padding: 0;
+   			}
+
+   		#background_landscape {
+   			background-image: "village.png";
+   			position:absolute;
+   			z-index:-998;
+   			top:0;
+   			left:0;
+   			height:100%;
+   			width:100%;
+   			overflow:hidden;
+   			}
+
+   		#sound {
+   			position:absolute;
+   			z-index:-999;
+   		}
+
+   		#box6, #box7, #box8, #box9, #box10 {
+   			display:inline-block;
+   			background:transparent;
+   			color:white;
+   			font-size:2em;
+   			transition: all 0.2s ease-in-out;
+   		}
+
+   		#box6:hover, #box7:hover, #box8:hover, #box9:hover, #box10:hover {
+   			transform: scale(1.2);
+   		}
+   		#box6 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box7 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box8 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box9 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box10 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		.character {
+   			margin-left:1000px;
+   			margin-top:100px;
+   		}
+
+
+/*======================SCRIPT CSS======================*/
+
+
+         .float_box6{
+            animation: Float 4s infinite;
+         }
+
+         @keyframes Float {
+            20%{ 
+            transform: translateX(-40px); 
+            opacity: 1;
+            }
+
+            40% {
+               transform: translateY(-40px);
+               opacity:0.5;
+            }
+
+            60% {
+               transform:translateX(40px);
+               opacity:1;
+            }
+
+            80% {
+               transform:translateY(-80px);
+               opacity:0.5;
+            }
+
+         }
+
+         .shake_box7 {
+            animation: Shake 0.2s 8;
+         }
+
+         @keyframes Shake {
+            25%{
+               transform: translateX(-10px);
+            }
+            75% {transform: translateX(10px);}
+         }
+
+         .hop_box8 {
+            animation: Hop 1s 2 ease-in-out;
+         }
+
+         @keyframes Hop{
+            25% {transform: translateX(-100px) translateY(-200px)
+            }
+
+            50% {transform: translateX(-200px) translateY(0px)
+            }
+
+            75% {transform:translateX(-100px) translateY(-200px)
+            }
+
+            100% {transform: translateX(0px) translateY(0px)
+            }
+         }
+
+         .backflip_box9{
+            animation: Backflip 0.5s 4 ease-in-out;
+         }
+
+         @keyframes Backflip{
+            25% {
+               transform: translateY(-50px);
+            }
+            50% {
+               transform: translateY(0px);
+            }
+            75% {
+               transform: translateY(-50px);
+            }
+            100% {
+               transform: translateY(0px);
+            }
+         }
+
+         .rotate_box10 {
+            animation: Rotate 0.5s linear;
+         }
+
+         @keyframes Rotate {
+            25% {
+               transform: rotate(90deg)
+            }
+
+            50% {
+               transform: rotate(180deg)
+            }
+
+            75% {
+               transform: rotate(270deg);
+            }
+
+            100% {
+               transform: rotate(360deg);
+            }
+         }
+        
+		</style>
+</head>
+
+<body>
+		<button id="box6">FLOAT</button>
+		<button id="box7">SHAKE</button>
+		<button id="box8">HOP</button>
+		<button id="box9">LAUGH</button>
+		<button id="box10">BACK FLIP</button>
+		<img class="character" src="sage_madara_small.png">
+		<div id="sound"> <audio autoplay controls> <source src="kokuten.mp3" type="audio/mpeg"> </audio> </div>
+		<img id="background_landscape" src="village.png">
+      <script src="script2.js"> </script>
+		
+		
+		
+</body>
+</html>

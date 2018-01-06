@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Madara's game</title>
+
+    <style>
+    	body{
+    		padding: 100px 20px 20px 20px;
+    		background:#232323;
+    		color:white;
+    		text-align: center;
+    	}
+
+    	h1{
+    		font-size: 3em;
+    	}
+
+    	h2{
+    		font-size: 2em;
+    	}
+    	#first, #second, #third{
+    		opacity: 0.5;
+    		transition: all 0.2s ease-in-out;
+    	}
+
+    	#first:hover, #second:hover, #third:hover{
+    		opacity:1.0;
+    		transform: scale(1.1);
+    		}
+
+	</style>
+</head>
+
+<body>
+	<h1> Madara's fight </h1>
+	<h2> <i> Pick a scene </i> </h2>
+    <h2> Also, remember to press a button and after the animation is complete, press the button again :) (Still has some bugs with that toggle/add in JS) </h2>
+	<a href="landscape.html"> <img src="small_landscape.png" id="first" alt="Landscape with two huge badass statues"> </a>
+	<a href="village.html"> <img src="small_rock_village.png" id="second" alt="Village within the rocky mountains"> </a>
+	<a href="light.html"> <img src="small_light_village.png" id="third" alt="A village and that's all"> </a>
+</body>

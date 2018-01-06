@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+    font-family: "Montserrat Light", "Montserrat", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background: #1d1f21;
+    overflow-x: hidden;
+}
+
+.nav {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    display: block;
+}
+
+.menu {
+    margin-right: 10vw;
+
+}
+
+.menu a {
+    background: transparent;
+    text-decoration: none;
+    color: #ddd;
+    line-height: 60px;
+    padding-right: 2em;
+
+}
+
+.menu a:hover {
+    font-weight: bold;
+}
+
+label {
+    margin-right: 10vw;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: #fff;
+}
+
+#toggle {
+    display: none;
+}
+
+#title_contact {
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 10vw;
+}
+
+#title_mobile {
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 10vw;
+}
+
+#content {
+    font-size: 1.3em;
+    display: block;
+    width: 44vw;
+    color: #fff;
+    position: absolute;
+    margin-top: 35vh;
+    margin-left: 14vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.meimage {
+    display: block;
+    position: relative;
+    height: auto;
+    float: right;
+    margin-top: 10vh;
+}
+
+.fixed {
+    position: fixed;
+    max-width: 40vw;
+    bottom: 0px;
+    left: 60%;
+}
+
+#e_mail {
+    font-size: 1.3em;
+    display: block;
+    width: 44vw;
+    color: #000;
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 14vw;
+    color:#fff;
+}
+
+#contact_link:hover {
+    text-decoration: underline;
+}
+
+#e_mail:hover {
+    text-decoration: underline;
+}
+
+#who_am_i_mobile {
+    display: none;
+}
+
+.fixed_mobile{display:none;}
+
+.main{color:#fff;}
+
+
+/*================== MOBILE BELOW ===================*/
+
+@media only screen and (max-width: 640px) {
+
+    body {
+        overflow-x: hidden;
+        padding-bottom: 60px;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100vw;
+        display: none;
+
+    }
+
+
+    #who_am_i_mobile {
+        display: block;
+        font-size: 1.2em;
+        width: 80vw;
+        padding-left: 10vw;
+        position:relative;
+        margin-top:40vh;
+        color:#fff;
+    }
+
+    .menu a {
+        display: block;
+        width: 100vw;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+        padding: 0;
+        /* ======== PADDING 0, OTHERWISE IS AFFECTED BY THE PADDING-RIGHT:2em THAT I PUT ABOVE */
+        background: #000;
+        cursor: pointer;
+        overflow: hidden;
+        color: #fff;
+        z-index: 3;
+    }
+
+    .menu a:hover {
+        background: #000;
+    }
+
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    #title_contact {
+        font-size: 2.5em;
+        margin-top: 40vh;
+        z-index: 2;
+        position: absolute;
+    }
+
+    #title_about {
+        display: none;
+    }
+    #content {
+        display: none;
+    }
+    
+    #title_mobile{display: none;}
+
+    #content {
+        font-size: 1.3em;
+        width: 70vw;
+    }
+
+    .fixed {
+        display: none;
+    }
+    
+    #title{display:none;}
+    
+    .fixed_mobile{display:block;}
+    
+    img{width:100vw;
+       margin-bottom:-60px !important;
+    }
+
+    #e_mail {
+        font-size: 1em;
+        display: block;
+        width: 44vw;
+        color: #000;
+        position: relative;
+        margin-top: 55vh;
+        margin-left: 5vw;
+        color:#fff;
+    }
+}

@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    display: grid;
+    width: 25em;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer"
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    background-color: #f95b5a;
+}
+
+header .main-logo {
+    width: 20%;
+    margin-left: 30%;
+}
+
+label {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+input {
+    display: none;
+}
+
+/*Meaning: el Nav debe estar justo despues del input:checked. Esto hace que cuando este seleccionado el checkbox se despliegue el menu*/
+
+input:checked ~ nav {
+    max-height: 500px;
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+}
+
+.main_gall img {
+    width: 100%;
+}
+
+.main_gall .foto1 {
+    grid-area: foto1;
+}
+
+.div_1 {
+    position: relative;
+}
+
+.span_1 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.span_1 a {
+    text-decoration: none;
+    font-size: 2em;
+    background-color: #245999;
+    margin-left: 100px;
+}
+
+.span_1 a:visited {
+    color: white;
+}
+
+.span_1 a:link {
+    color: white;
+}
+
+.main_gall .foto2 {
+    grid-area: foto2;
+}
+
+.div_2 {
+    position: relative;
+}
+
+.span_2 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.span_2 a {
+    text-decoration: none;
+    font-size: 2em;
+    background-color: #245999;
+    margin-left: 100px;
+}
+
+.span_2 a:visited {
+    color: white;
+}
+
+.span_2 a:link {
+    color: white;
+}
+
+.main_gall .foto3 {
+    grid-area: foto3;
+}
+
+.div_3 {
+    position: relative;
+}
+
+.span_3 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.span_3 a {
+    text-decoration: none;
+    font-size: 2em;
+    background-color: #245999;
+    margin-left: 100px;
+}
+
+.span_3 a:visited {
+    color: white;
+}
+
+.span_3 a:link {
+    color: white;
+}
+
+.main_gall .foto4 {
+    grid-area: foto4;
+}
+
+.div_4 {
+    position: relative;
+}
+
+.span_4 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.span_4 a {
+    text-decoration: none;
+    font-size: 2em;
+    background-color: #245999;
+    margin-left: 100px;
+}
+
+.span_4 a:visited {
+    color: white;
+}
+
+.span_4 a:link {
+    color: white;
+}
+
+aricle {
+    width: 100%;
+}
+
+article a {
+    text-decoration: none;
+    color: #f95b5a;
+    text-align: left;
+}
+
+article table {
+    ;
+    margin-top: 10px;
+    text-align: left;
+}
+
+article table th {
+    background-color: #245999;
+    color: white;
+    font-size: 11px;
+}
+
+article img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+article h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.article1 {
+    grid-area: article1;
+    margin-left: 5px;
+}
+
+.article2 {
+    grid-area: article2;
+}
+
+.article3 {
+    grid-area: article3;
+}
+
+.article4 {
+    grid-area: article4;
+}
+
+.article5 {
+    grid-area: article5;
+    width: 100%;
+    background-color: #f95b5a;
+    border-color: white;
+    text-align: center;
+    color: white;
+}
+
+.article5 p {
+    text-align: center;
+}
+
+.article6 {
+    grid-area: article6;
+    width: 100%;
+    background-color: #f95b5a;
+    border-color: white;
+    text-align: center;
+    color: white;
+}
+
+.article6 p {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #245999;
+    font-size: 0.8em;
+}
+
+section {
+    width: 100%;
+}
+
+section div img {
+    width: 100%;
+    margin: 5px
+}
+
+.gallery_box1 {
+    grid-area: gallery_box1;
+}
+
+.gallery_box2 {
+    grid-area: gallery_box2;
+}
+
+.gallery_box3 {
+    grid-area: gallery_box3;
+}
+
+.gallery_box4 {
+    grid-area: gallery_box4;
+}
+
+.gallery_box5 {
+    grid-area: gallery_box5;
+}
+
+.gallery_box6 {
+    grid-area: gallery_box6;
+}
+
+/*//////////////////////////////DESKTOP//////////////////*/
+
+@media all and (min-width:1024px) {
+    body {
+        width: 1024px;
+    }
+    header {
+        width: 100%;
+        height: 80px;
+    }
+    header .main-logo {
+        margin-left: 45px;
+        width: 110px;
+        margin-top: 5px;
+    }
+    label {
+        display: none;
+    }
+    nav {
+        overflow: visible;
+        display: inline-block;
+        float: right;
+        margin-top: 30px;
+    }
+    nav ul {
+        margin: 5px;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+    .main_gall {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "foto1 foto2" "foto3 foto4"
+    }
+    .main_gall img {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "article1 article2" "article3 article3" "article4 article4" "article5 article6"
+    }
+    article p {
+        text-align: left;
+    }
+    article img {
+        display: run-in;
+        margin-top: 30px;
+    }
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "gallery_box1 gallery_box2" "gallery_box3 gallery_box4" "gallery_box5 gallery_box6"
+    }
+    .span_1 a {
+        margin-left: 160px
+    }
+    .span_2 a {
+        margin-left: 160px
+    }
+    .span_3 a {
+        margin-left: 160px
+    }
+    .span_4 a {
+        margin-left: 160px
+    }
+}

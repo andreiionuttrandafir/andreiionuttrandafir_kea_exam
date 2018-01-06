@@ -1,0 +1,308 @@
+/* ========================= WHAT'S UNDER THIS LINE IS THE DESKTOP STYLING ================== */
+
+html{
+	font-family: Verdana, sans-serif;
+}
+
+body{
+	background-color:white;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+ color: inherit; 
+} 
+
+.header{
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 100%;
+	height: 60px;
+	background-color: #171714;
+	margin-bottom: 100px;
+}
+
+#logo{
+	width: 1.8%;
+	margin-top: 10px;
+}
+
+.container{
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+}
+
+.header ul{
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	margin-right: 20%;
+	height: 60px;
+	width: 800px;
+}
+
+.header ul li{
+	text-align: center;
+	width: 20%;
+	float: left;
+	height: 60px;
+}
+
+.header ul li a{
+	display: block;
+	background-color: #171714;
+	line-height: 60px;
+	height: 100%;
+	font-size: 1.2em !important;
+	text-decoration: none;
+	color: #D4D4D4;
+	transition: 0.2s ease-in-out;
+}
+
+.header ul li a:hover{
+	background-color: #2D2D2C;
+}
+
+.container h1{
+	color: white;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.container p{
+	color: #232323;
+	font-size: 0.9em;
+	text-align: justify;
+}
+
+#homepagetext{
+	font-size:1em;
+	color:#232323;
+	font-style:none;
+}
+
+#title{
+	font-size:2em;
+	color:#232323;
+	font-style:none;
+}
+
+#artnouveauquote{
+	font-size:0.8em;
+	color:#232323;
+	font-style:none;
+}
+
+#subtitles{
+	font-size:1.2em;
+	color:#232323;
+	font-style:none;
+}
+
+#imagini{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 100%;
+    height: auto; 
+}
+	
+#featureslist{
+		font-size:0.8em;
+		color:#232323;
+}
+
+#paragrafe{
+		font-size:1em;
+		color:#232323;
+		text-align::center,;
+	}
+
+#paragrafe2{
+	font-size:1em;
+	color:#232323;
+	text-align: center;
+}
+
+#poem {
+	font-size: 1em;
+	text-align:center;
+	color:#232323;
+}
+
+#robotel {
+	text-align: center;
+	width: 30%;
+	float: left;
+	height: auto;
+}
+
+/* ========================= GRIDS ======================*/
+
+    
+    
+/* ================= WHAT UNDER THIS LINE IS THE MOBILE STYLING ====================== */
+
+@media only screen and (max-width: 1080px) {
+
+	body{
+		background-color: white;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+ 		color: inherit; 
+	} 
+
+	.header{
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		width: 100%;
+		height: 100px;
+		background-color: #171714;
+		margin-bottom: 0;
+	}
+
+	#logo{
+		width: 5%;
+		margin-top: 0%;
+		margin-left: 48%;
+		margin-bottom: 50px;
+		display:block;
+	    text-align: center;
+	    padding-top: 0;
+	}
+
+	.container{
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	.header ul{
+		float: none;
+		margin-top: -25px;
+		padding: 0;
+		list-style: none;
+		margin-right: 0;
+		height: 100px;
+		width: 100%;
+
+	}
+
+	.header ul li{
+		float: none;
+		text-align: center;
+		width: 100%;
+		font-size: 1.5em !important;
+	}
+
+	.header ul li a{
+		display: block;
+		background-color: #171714;
+		line-height: 60px;
+		height: 100%;
+		text-decoration: none;
+		color: #D4D4D4;
+		transition: 0.2s ease-in-out;
+	}
+
+	.header ul li a:hover{
+		background-color: #2D2D2C;
+	}
+
+	.container h1{
+		font-size: 18px;
+		margin-top: 350px;
+		color: white;
+		width: 100%;
+		text-align: center;
+	}
+	.container p{
+		color: #232323;
+		font-size: 1em;
+		text-align: justify;
+	}
+
+
+	#homepagetext{
+		font-size:1em;
+		color:#232323;
+		font-style:none;
+	}
+
+
+	#title{
+		font-size:2em;
+		color:#232323;
+		font-style:none;
+		}
+
+	#artnouveauquote{
+		font-size:0.8em;
+		color:#232323;
+		font-style:;
+	}
+
+	#subtitles{
+		font-size:1.2em;
+		color:#232323;
+		font-style:none;
+	}
+
+	#imagini{
+	    display:block;
+	    text-align: center;
+	    max-width: 100%;
+    	height: auto;
+    	margin-left:auto;
+  	    margin-right:auto
+	}
+
+	#featureslist{
+		font-size:0.8em;
+		color:#232323;
+		text-align: justify;
+	}
+
+	#paragrafe{
+		font-size:1em;
+		color:#232323;
+	}
+
+	#paragrafe2{
+		font-size:1em;
+		color:#232323;
+		text-align: center;
+	}
+
+	#poem {
+		font-size: 1em;
+		text-align:center;
+		color:#232323;
+	}
+	
+	#robotel {
+		text-align: center;
+		width: 30%;
+		float: left;
+		height: auto;
+	}
+
+	#youtube{
+	text-align: center;
+	width: 100%
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	} 
+
+
+}
+

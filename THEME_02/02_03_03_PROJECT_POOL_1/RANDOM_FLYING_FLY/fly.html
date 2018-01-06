@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+    <style>
+        img {
+            max-height: 5vh;
+            position:absolute;
+            top:0px;
+            left:0px;
+            transition: all 0.2s;
+        }
+    </style>
+    </head>
+    
+    
+ <body>
+     <img src="fly1.jpg"id="annoying_fly" alt="Click me if you can">
+     <audio id="flying_fly" src="bzzz.mp3" autoplay></audio>
+     
+     <script>
+       
+         let Fly = document.querySelector("#annoying_fly")
+         
+         setInterval(Run, 600)
+         
+         function Run(){
+             console.log("run");
+             let x = Math.floor(Math.random()*1000);
+             let y = Math.floor(Math.random()*400);
+             Fly.style.transform = "rotate("+(Math.random()*360)+"deg)";
+             Fly.style.top=x+'px';
+             Fly.style.left=y+'px';
+             
+             };
+         
+         Fly.addEventListener("click", Killed)
+         function Killed (){
+             let imageNumber = 1;
+         setTimeout(swap2images, 1)
+         function swap2images (){
+             imageNumber++;
+             Fly.setAttribute('src', 'fly'+imageNumber+'.jpg')
+             console.log("swap", imageNumber);
+             if(imageNumber==2){
+                 imageNumber=2;
+                 flying_fly.pause();
+                 clearInterval(Run);
+                 Fly.style.transform = "rotate(0deg)";
+                 function Run(){unbind;} //========WHY IS IT NOT WORKING?!
+         }
+         }}
+         
+        
+         
+         
+         
+         
+                
+    </script>
+    </body>
+</html>

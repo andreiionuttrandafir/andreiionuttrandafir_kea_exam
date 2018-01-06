@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Madara's game</title>
+   	 <style>
+   		body {
+   			height: 100%;
+   			width: 100%;
+   			margin: 0;
+   			padding: 0;
+   			}
+
+   		#background_landscape {
+   			background-image: "landscape.png";
+   			position:absolute;
+   			z-index:-998;
+   			top:0;
+   			left:0;
+   			height:100%;
+   			width:100%;
+   			overflow:hidden;
+   			}
+
+   		#sound {
+   			position:absolute;
+   			z-index:-999;
+   		}
+
+   		#box1, #box2, #box3, #box4, #box5 {
+   			display:inline-block;
+   			background:transparent;
+   			color:white;
+   			font-size:2em;
+   			transition: all 0.2s ease-in-out;
+   		}
+
+   		#box1:hover, #box2:hover, #box3:hover, #box4:hover, #box5:hover {
+   			transform: scale(1.2);
+   		}
+   		#box1 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box2 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box3 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box4 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		#box5 {
+   			margin-left:150px;
+   			margin-top:100px;
+   		}
+
+   		.character {
+   			margin-left:800px;
+   			margin-top:260px;
+   		}
+
+   		/*======================SCRIPT CSS======================*/
+
+   		.jump_box1 {
+            animation: Jump 0.7s
+
+         }
+
+         @keyframes Jump {
+            40% {
+               transform: translateY(-200px)
+            }
+
+            60% {
+            	transform: translateY(-200px)
+            }
+
+            100% {
+               transform: translateY(0)
+            }
+
+
+         }
+
+         .move_box2 {
+         	animation: Move 1.5s linear
+         }
+
+         @keyframes Move {
+         	50% { transform:translateX(-400px)
+         	 }
+
+         	 100% { transform: translateX(0px)
+         	 }
+
+         }
+
+         .run_box3 {
+         	animation: Run 1.5s ease-in-out;
+         }
+
+         @keyframes Run {
+         	20% {
+         		transform: translateX(50px);
+         	}
+
+         	100% {
+         		transform: translateX(-1400px);
+         	}
+         }
+
+         .fall_box4 {
+         	animation: Fall 5s ease-in-out;
+         }
+
+         @keyframes Fall {
+         	10% { 
+         		transform: translateY(-100px) 
+         	}
+         	50% {
+         		transform: translateY(2500px)
+         	}
+         	99% {
+         		transform: translateY(2500px)
+         	}
+
+         	100% {
+         		transform: translateY(0px)
+         	}
+         }
+
+         .die_box5{
+         	animation: Die 2s;
+         }
+
+         @keyframes Die {
+         	50% {
+         		transform: translateY(-25px);
+         	
+         	}
+
+         	100% {
+         		transform: translateY(0);
+         		opacity:0;
+         	}
+         }
+
+
+		</style>
+</head>
+
+<body>
+		<button id="box1">JUMP</button>
+		<button id="box2">MOVE</button>
+		<button id="box3">RUN</button>
+		<button id="box4">FALL</button>
+		<button id="box5">DIE</button>
+		<img class="character" src="madara-1.png">
+		<div id="sound"> <audio autoplay controls> <source src="victory.mp3" type="audio/mpeg"> </audio> </div>
+		<img id="background_landscape" src="landscape.png">
+		<script src="script.js"></script>
+		
+		
+		
+</body>
+</html>

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+    font-family: "Montserrat Light", "Montserrat", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+    animation: background_colour 3s linear forwards;
+
+}
+
+@keyframes background_colour {
+    0% {
+        background: #000;
+    }
+
+    80% {
+        background: #000;
+    }
+    100% {
+        background: #674FA3;
+        /* ===== FINAL BACKGROUND COLOUR */
+    }
+}
+
+#anim {
+    position: absolute;
+    margin-left: 0vw;
+    margin-top: 50vh;
+    background: #fff;
+    display: block;
+    width: 60px;
+    height: 1px;
+    animation: loading_line 3s linear forwards;
+}
+
+@keyframes loading_line {
+    0% {
+        transform: translateX(0vw)
+    }
+    10% {
+        transform: translateX(20vw)
+    }
+    15% {
+        transform: translateX(20vw)
+    }
+    30% {
+        transform: translateX(50vw)
+    }
+    50% {
+        transform: translateX(50vw)
+    }
+    65% {
+        transform: translateX(70vw)
+    }
+    70% {
+        transform: translateX(80vw)
+    }
+    100% {
+        transform: translateX(100vw)
+    }
+}
+
+.nav {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    animation: nav_intro 1s linear forwards;
+    display: none;
+}
+
+@keyframes nav_intro {
+    0% {
+        transform: translateY(0vh);
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        transform: translateY(1vh);
+        opacity: 1;
+        display: block;
+    }
+}
+
+.menu {
+    margin-right: 10vw;
+
+}
+
+.menu a {
+    background: transparent;
+    text-decoration: none;
+    color: #ddd;
+    line-height: 60px;
+    padding-right: 2em;
+
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+label {
+    margin-right: 10vw;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: #fff;
+}
+
+#toggle {
+    display: none;
+}
+
+main {
+    color: #ddd;
+    position: relative;
+    padding-top: 45vh;
+    margin-left: 15vw;
+    animation: welcome 1s linear forwards;
+    display: none;
+    float: left;
+    font-size: 3em;
+
+}
+
+
+@keyframes welcome {
+    0% {
+        transform: translateY(0vw);
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        transform: translateY(-2vh);
+        opacity: 1;
+        display: block;
+    }
+}
+
+main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main a:hover {
+    color: #fff;
+}
+
+
+
+#blink {
+    animation: blinking 0.9s linear infinite;
+    position: absolute;
+
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1.0
+    }
+    50% {
+        opacity: 0
+    }
+    90% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1.0
+    }
+}
+
+
+
+/*================== MOBILE BELOW ===================*/
+
+@media only screen and (max-width: 640px) {
+
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100wv;
+        display: none;
+    }
+
+
+    .menu a {
+        display: block;
+        width: 100vw;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+        padding: 0;
+        /* ======== PADDING 0, OTHERWISE IS AFFECTED BY THE PADDING-RIGHT:2em THAT I PUT ABOVE */
+        background: #5B4495;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 2;
+        float: left;
+    }
+
+    .menu a:hover {
+        background: #4B3682
+    }
+
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    #anim {
+        width: 10vw;
+    }
+
+    main {
+        padding-top: 20vh;
+        font-size: 1.5em;
+        z-index: 1;
+        position: relative;
+
+    }
+}
